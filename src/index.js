@@ -1,8 +1,20 @@
-import { saludar } from './js/componentes';
 import './styles.css';
+import { crearTodoHtml } from './js/componentes';
+import { Todo, TodoList } from './classes';
 
+export const todoList = new TodoList();
 
+//const tarea = new Todo('Aprendiendo Js'); 
 
-let nombre = 'FlavioPs';
+//todoList.nuevoTodo( tarea );
 
-saludar( nombre );
+//console.log(todoList);
+
+//crearTodoHtml( tarea );
+
+//LocalStorage && SesionStorage
+
+//localStorage.setItem('mi-key', 'ABC123');
+
+todoList.todos.forEach( todo => crearTodoHtml( todo ));
+
